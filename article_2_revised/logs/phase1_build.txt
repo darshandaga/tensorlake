@@ -1,0 +1,20 @@
+Image: analyst-agent-image
+Template ID: sandbox_template_DgJkWFQ97gtB7DM9RRMKb
+Snapshot ID: snapshot_sandbox_template_build_Dz8dqfKJCcRGqCC8FDmBL
+Build time: 123.5s
+Base image: python:3.11-slim
+Packages installed: numpy pandas scikit-learn scipy statsmodels anthropic requests
+Snapshot size: 253279436 bytes (~241 MB)
+Rootfs disk: 10737418240 bytes (10 GB)
+Status: SUCCESS
+
+--- VERIFY ---
+Sandbox ID: 47pvn29y4wdwpiclefrra
+Boot time: 4.45s
+numpy 2.4.6 | pandas 3.0.3 | scipy 1.17.1 | anthropic 0.112.0
+Status: VERIFIED
+
+--- BOOT BENCHMARK ---
+Cold boot + pip install: 17.78s
+Registered image boot:    4.34s
+Speedup:                  4.1x

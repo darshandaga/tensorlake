@@ -1,0 +1,8 @@
+=== Cold boot + runtime pip install ===
+Cold: 17.78s
+
+=== Registered image boot (analyst-agent-image) ===
+Image: 4.34s
+
+Speedup: 4.1x faster with registered image
+Saved to outputs/boot_benchmark.json

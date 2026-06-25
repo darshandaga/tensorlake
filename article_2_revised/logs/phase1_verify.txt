@@ -1,0 +1,13 @@
+=== Verifying image: analyst-agent-image ===
+Booting a sandbox from the registered image...
+Sandbox 47pvn29y4wdwpiclefrra booted in 4.45s
+numpy 2.4.6
+pandas 3.0.3
+scipy 1.17.1
+anthropic 0.112.0
+ALL PACKAGES OK
+
+REGISTERED IMAGE: analyst-agent-image
+SANDBOX ID: 47pvn29y4wdwpiclefrra
+BOOT TIME: 4.45s
+STATUS: VERIFIED

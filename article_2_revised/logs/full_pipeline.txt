@@ -1,0 +1,82 @@
+============================================================
+TENSORLAKE MULTI-AGENT PIPELINE
+============================================================
+
+[Phase 1] Running 4 analyst agents in parallel...
+  [Statistician] Sandbox 825lasxk9rlhol4hr4rbz booted
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 1/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 1/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 1/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 2/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 2/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 2/12)...
+  ✓ statistician | 17.39s | sandbox 825lasxk9rlhol4hr4rbz
+  [TrendAnalyst] Sandbox fq69jc85ghbet7mfidvwe booted
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 3/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 3/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 4/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 4/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 5/12)...
+  [Forecaster] Sandbox rhk4ca1iph9ic7svbipjz booted
+  ✓ trend_analyst | 44.63s | sandbox fq69jc85ghbet7mfidvwe
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 6/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 7/12)...
+  [boot_sandbox] Quota hit — waiting 8.0s then retrying (attempt 8/12)...
+  ✓ forecaster | 71.55s | sandbox rhk4ca1iph9ic7svbipjz
+  [AnomalyDetector] Sandbox wmahvt2peqvvavb7yeiyr booted
+  ✓ anomaly_detector | 104.43s | sandbox wmahvt2peqvvavb7yeiyr
+
+  Parallel execution: 108.28s
+
+[Phase 2] Aggregator synthesising reports...
+
+============================================================
+EXECUTIVE SUMMARY
+============================================================
+# Executive Briefing: Revenue Performance & Outlook
+
+**Prepared by:** Data Science Lead
+**Coverage:** 90-day historical dataset + 10-day forward forecast (Days 91–100)
+
+---
+
+## 1. Key Statistical Properties
+
+The dataset exhibits a well-behaved, near-normal distribution with a mean of **$1,467** and median of **$1,492** — a gap of only 1.6%, confirming no material outlier distortion. Revenue spans **$942 to $2,313**, with a standard deviation of **$295** (~20% of mean), indicating moderate but manageable volatility. The slightly negative kurtosis (−0.695) reflects a platykurtic distribution: values are broadly spread rather than concentrated around the mean, suggesting natural day-to-day revenue fluctuation is the norm rather than exception.
+
+---
+
+## 2. Main Trend Direction & Growth Rate
+
+Revenue is on a **confirmed, statistically significant upward trend** (p < 0.0001, R² = 0.82), advancing at approximately **$10–11 per day**. Weekly cohort averages illustrate steady progression: **Week 1 ($1,014) → Week 2 ($1,115) → Week 3 ($1,182) → Week 4 ($1,220)**. However, the rate of weekly incremental gain is decelerating materially — from **+$101 (Week 1→2) to +$66 (Week 2→3) to +$38 (Week 3→4)** — signalling a transition from early-stage acceleration toward a more linear or plateau trajectory. The most recent 7-day rolling average of **$1,852** outpaces all four weekly cohort averages, confirming late-period momentum remains intact despite deceleration in growth rate.
+
+---
+
+## 3. Most Significant Anomalies
+
+Anomaly activity is minimal. The sole flagged data point is **Day 45 ($2,313)**, identified as a Z-score outlier — elevated relative to the dataset mean, though technically within the IQR upper bound of **$2,409**. This spike is most likely attributable to a **promotional event, end-of-month purchasing surge, or a single large enterprise order**. Critically, no IQR-based extreme outliers exist in either direction, and the dataset shows no catastrophic drops or data integrity concerns. The overall signal is one of a **stable, healthy revenue series**.
+
+---
+
+## 4. Revenue Forecast: Days 91–100
+
+| Milestone | Value |
+|---|---|
+| Day 91 (start) | $1,990 |
+| Day 92 | ~$2,001 (**$2K threshold crossed**) |
+| Day 100 (end) | $2,090 |
+| Total 10-day gain | +$100 (+5.0%) |
+| Daily growth rate | +$11.12/day |
+| Forecast uncertainty band | ±$97 (MAE) |
+| Practical Day 100 range | **$1,993 – $2,187** |
+
+The linear model carries a moderate R² of 0.76, leaving 24% of variance unexplained by time alone. Operational planning should be anchored to the **$1,993–$2,187 band**, not a point estimate. Seasonal effects, weekday/weekend patterns, and promotional events are not captured by the current model and represent the primary sources of forecast error. An alert threshold of **±$100 vs. daily forecast** is recommended for real-time monitoring.
+
+---
+
+## 5. Overall Business Recommendation
+
+Revenue growth is real, statistically robust, and on track to cross the **$2,100 level within 10 days**, but the decelerating weekly growth rate (from +$101/week to +$38/week) warrants immediate investigation into the Week 1→2 demand surge driver — replicating that catalyst is the clearest path to re-accelerating growth. In parallel, enrich the forecasting model with day-of-week indicators and promotional calendar flags to reduce the current ±$97 daily forecast error and improve planning precision ahead of any scaling decisions.
+
+Total time: 130.18s
+Saved to outputs/full_pipeline_results.json

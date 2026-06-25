@@ -1,0 +1,123 @@
+{
+  "parallel_secs": 102.92,
+  "total_secs": 102.92,
+  "sandbox_ids": [
+    "9aek31r972eh5nemqx4iq",
+    "txuqkzzsacyssqxbexcxa",
+    "ug9iml4g43us4uq7w7oiv",
+    "h09rkjqrdu6uk09zswngd"
+  ],
+  "reports": [
+    {
+      "agent": "statistician",
+      "sandbox_id": "9aek31r972eh5nemqx4iq",
+      "elapsed_secs": 26.18,
+      "raw_stats": {
+        "mean": 1467.44,
+        "median": 1491.85,
+        "std": 294.58,
+        "min": 942.35,
+        "max": 2312.86,
+        "skewness": 0.1669,
+        "kurtosis": -0.695,
+        "q25": 1222.49,
+        "q75": 1697.12
+      },
+      "interpretation": "## Statistical Summary\n\n---\n\n### Descriptive Measures\n\n| Statistic | Value |\n|-----------|-------|\n| **Mean** | 1,467.44 |\n| **Median** | 1,491.85 |\n| **Std Deviation** | 294.58 |\n| **Min** | 942.35 |\n| **Max** | 2,312.86 |\n| **Q1 (25th percentile)** | 1,222.49 |\n| **Q3 (75th percentile)** | 1,697.12 |\n| **IQR** | 474.63 |\n| **Skewness** | 0.1669 |\n| **Kurtosis (excess)** | \u22120.695 |\n\n---\n\n### Shape & Distribution Analysis\n\n**Central Tendency & Spread**\nThe mean (1,467.44) and median (1,491.85) are closely aligned, with a difference of only ~24 points (~1.6%), indicating a well-centered distribution with no severe outlier distortion. The standard deviation of 294.58 reflects moderate dispersion (~20% of the mean), and the IQR of 474.63 confirms a reasonably tight middle 50%.\n\n**Skewness (0.1669 \u2014 Near Symmetric)**\nThe distribution is nearly symmetric with a marginal positive (right) skew. The slight pull toward higher values is minimal and unlikely to be practically significant.\n\n**Kurtosis (\u22120.695 \u2014 Platykurtic)**\nA negative excess kurtosis indicates a **platykurtic** distribution \u2014 flatter than normal, with lighter tails and fewer extreme outliers. Values are more uniformly spread across the range than a Gaussian baseline would predict.\n\n---\n\n### Interpretation\n\nThe dataset exhibits a **near-normal, slightly flat distribution** with values concentrated between ~1,222 and ~1,697. The data is well-behaved with no notable skew or heavy-tail risk. Suitable for parametric modeling with minimal transformation required."
+    },
+    {
+      "agent": "anomaly_detector",
+      "sandbox_id": "txuqkzzsacyssqxbexcxa",
+      "elapsed_secs": 50.48,
+      "anomaly_data": {
+        "iqr_bounds": {
+          "lower": 510.56,
+          "upper": 2409.05
+        },
+        "iqr_outliers": [],
+        "zscore_outliers": [
+          {
+            "day": 45,
+            "revenue": 2312.86
+          }
+        ],
+        "num_iqr_outliers": 0,
+        "num_zscore_outliers": 1
+      },
+      "interpretation": "# Revenue Anomaly Detection Analysis\n\n## Summary\nA **single, moderate anomaly** was detected in this dataset, flagged exclusively by the Z-score method.\n\n---\n\n## Anomaly Breakdown\n\n| Day | Revenue | IQR Range | IQR Outlier? | Z-Score Outlier? |\n|-----|---------|-----------|--------------|------------------|\n| **45** | **$2,312.86** | $510.56 \u2013 $2,409.05 | \u274c No | \u2705 Yes |\n\n---\n\n## Magnitude Assessment\n\n```\nNormal IQR Range:  |----[  $510.56 \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 $2,409.05  ]----|\nDay 45 Revenue:                                      \u25b2 $2,312.86\n                                               (96% into the IQR)\n```\n\n- **Within IQR bounds** \u2192 Not a structural outlier\n- **Z-score flagged** \u2192 Sits in the **upper tail of the distribution**\n- The value is likely **1.96\u20133 standard deviations above the mean**, suggesting the mean/distribution is pulled lower than the IQR midpoint\n\n---\n\n## Key Observations\n\n### \ud83d\udfe1 Low Severity \u2014 Borderline Anomaly\n- The datapoint is **technically within the IQR range** but near the top ceiling ($2,312 vs. upper bound $2,409)\n- This **disagreement between methods** suggests the overall distribution is **right-skewed** (Z-score is more sensitive to this)\n\n### \ud83d\udcca Distribution Insight\n> The IQR lower bound ($510.56) being much further from center than the upper bound implies **most days have lower revenue**, making Day 45's figure statistically unusual even without being a hard outlier.\n\n---\n\n## Likely Causes\n\n| Probability | Cause |\n|-------------|-------|\n| \ud83d\udd34 High | **Promotional event or sale** driving a one-day spike |\n| \ud83d\udd34 High | **Bulk/enterprise order** recorded on that day |\n| \ud83d\udfe1 Medium | **Seasonal effect** (weekend, holiday, payday cycle) |\n| \ud83d\udfe1 Medium | **Data aggregation delay** \u2014 multiple days recorded at once |\n| \ud83d\udfe2 Low | **Data entry error** (less likely since it's within IQR) |\n\n---\n\n## Recommendations\n\n1. \u2705 **No immediate data quality concern** \u2014 this is unlikely a dirty data issue\n2. \ud83d\udd0d **Investigate Day 45's context** \u2014 cross-reference with marketing campaigns or order logs\n3. \ud83d\udcc8 **Monitor the upper IQR boundary** \u2014 if future values consistently approach $2,409+, consider recalibrating your baseline\n4. \ud83d\udd04 **Re-run analysis with more data** \u2014 a single Z-score outlier in a dataset suggests the model is well-calibrated"
+    },
+    {
+      "agent": "trend_analyst",
+      "sandbox_id": "ug9iml4g43us4uq7w7oiv",
+      "elapsed_secs": 75.73,
+      "trend_data": {
+        "slope_per_day": 10.1834,
+        "r_squared": 0.8156,
+        "p_value": 0.0,
+        "trend_direction": "upward",
+        "rolling_7d_avg_last": 1851.69,
+        "weekly_averages": [
+          1014.05,
+          1115.49,
+          1181.62,
+          1219.52
+        ]
+      },
+      "interpretation": "## Trend Analysis Report\n\n### \ud83d\udcc8 Directional Movement\n**Strongly Upward** \u2014 The trend direction is unambiguously positive, with consistent week-over-week revenue growth across all observed periods.\n\n---\n\n### \ud83d\udcd0 Slope & Growth Rate\n| Metric | Value |\n|--------|-------|\n| Slope | **+$10.18 per day** |\n| Implied Weekly Gain | **~$71.28/week** |\n| Rolling 7-Day Avg (latest) | **$1,851.69** |\n\nRevenue is compounding at a **meaningful daily rate**, suggesting an organic and sustained growth curve rather than a spike-driven anomaly.\n\n---\n\n### \ud83d\udd12 Statistical Confidence\n- **R\u00b2 = 0.8156** \u2192 The linear trend explains **~82% of revenue variance** \u2014 a strong fit indicating the upward trajectory is structural, not noise-driven\n- **p-value = 0.000** \u2192 Results are **statistically significant at the highest confidence level**; the probability this trend is random is effectively zero\n\n---\n\n### \ud83d\udd00 Key Inflection Points\nTracking the weekly averages reveals a **decelerating acceleration** pattern:\n\n| Week | Avg Revenue | Week-over-Week Change |\n|------|-------------|----------------------|\n| Week 1 | $1,014.05 | \u2014 (baseline) |\n| Week 2 | $1,115.49 | **+$101.44 (+10.0%)** |\n| Week 3 | $1,181.62 | **+$66.13 (+5.9%)** \u26a0\ufe0f |\n| Week 4 | $1,219.52 | **+$37.90 (+3.2%)** \u26a0\ufe0f |\n\n> \u26a0\ufe0f **Critical Inflection:** Growth rate is **compressing by roughly 50% each week**. While absolute revenue continues to climb, the *rate of growth is decelerating sharply.*\n\n---\n\n### \ud83e\udde0 Key Takeaways & Recommendations\n\n1. **Trend is real and strong** \u2014 High R\u00b2 and zero p-value confirm this is not statistical noise\n2. **Watch for plateau risk** \u2014 The halving of weekly growth increments ($101 \u2192 $66 \u2192 $38) suggests the curve may be transitioning from linear to logarithmic growth\n3. **The rolling 7-day avg ($1,851.69) significantly exceeds Week 4 avg ($1,219.52)** \u2014 indicating a **late-period acceleration** that warrants monitoring; this could signal a new inflection upward or a short-term outlier\n4. **Recommended action:** Extend the observation window to confirm whether the rolling avg surge represents a genuine trend break or a transient spike before forecasting forward"
+    },
+    {
+      "agent": "forecaster",
+      "sandbox_id": "h09rkjqrdu6uk09zswngd",
+      "elapsed_secs": 94.29,
+      "forecast_data": {
+        "model": "linear_regression",
+        "slope_per_day": 11.117,
+        "r_squared": 0.7599,
+        "holdout_mae": 96.92,
+        "forecast": [
+          {
+            "day": 91,
+            "predicted_revenue": 1990.32
+          },
+          {
+            "day": 92,
+            "predicted_revenue": 2001.44
+          },
+          {
+            "day": 93,
+            "predicted_revenue": 2012.56
+          },
+          {
+            "day": 94,
+            "predicted_revenue": 2023.67
+          },
+          {
+            "day": 95,
+            "predicted_revenue": 2034.79
+          },
+          {
+            "day": 96,
+            "predicted_revenue": 2045.91
+          },
+          {
+            "day": 97,
+            "predicted_revenue": 2057.02
+          },
+          {
+            "day": 98,
+            "predicted_revenue": 2068.14
+          },
+          {
+            "day": 99,
+            "predicted_revenue": 2079.26
+          },
+          {
+            "day": 100,
+            "predicted_revenue": 2090.37
+          }
+        ]
+      },
+      "interpretation": "# Revenue Forecast Analysis: Days 91\u2013100\n\n---\n\n## \ud83d\udcc8 Expected Growth\n\n| Metric | Value |\n|---|---|\n| Starting Revenue (Day 91) | $1,990.32 |\n| Ending Revenue (Day 100) | $2,090.37 |\n| Total 10-Day Growth | **+$100.05 (+5.03%)** |\n| Daily Growth Rate | **+$11.12/day** |\n| Growth Pattern | Steady, linear progression |\n\nThe forecast projects a **consistent upward trend** of approximately $11.12 in revenue per day, crossing the psychologically notable **$2,000 threshold on Day 92** and approaching $2,100 by Day 100.\n\n---\n\n## \ud83c\udfaf Confidence Level: **Moderate**\n\n### Supporting Factors\n- **R\u00b2 = 0.7599** \u2014 The linear model explains ~76% of revenue variance. This is a reasonably good fit, but ~24% of variation remains unexplained by the trend alone.\n- **MAE = $96.92** \u2014 On any given day, actual revenue could realistically deviate by ~$97 in either direction.\n\n### Practical Confidence Range\n\n| Day | Predicted | Lower Bound (-MAE) | Upper Bound (+MAE) |\n|---|---|---|---|\n| 91 | $1,990.32 | $1,893.40 | $2,087.24 |\n| 95 | $2,034.79 | $1,937.87 | $2,131.71 |\n| 100 | $2,090.37 | $1,993.45 | $2,187.29 |\n\n> \u26a0\ufe0f **Note:** Even the lower bound on Day 100 (~$1,993) stays near current levels, suggesting downside is limited under linear assumptions \u2014 but the model does not account for shocks or seasonality.\n\n---\n\n## \ud83d\udcbc Business Implications\n\n### \u2705 Opportunities\n- **Sustained momentum:** The consistent $11/day slope suggests an underlying demand driver (marketing campaign, seasonal lift, or product adoption) that is holding steady \u2014 worth identifying and doubling down on.\n- **$2,000 milestone:** Crossing this threshold on Day 92 could serve as a milestone for team motivation or stakeholder reporting.\n- **10-day revenue projection:** Expected cumulative revenue over this period is approximately **$20,403**, useful for short-term cash flow planning.\n\n### \u26a0\ufe0f Risks & Limitations\n- **Linear models don't capture inflection points.** If growth is driven by a fading campaign or seasonal effect, actual results could flatten or dip below forecast.\n- **~$97 daily error is material.** At ~4.8% of predicted values, operational decisions (staffing, inventory, ad spend) should build in this buffer.\n- **24% unexplained variance** suggests meaningful external factors (day-of-week effects, promotions, competition) are not captured.\n\n---\n\n## \ud83d\udd11 Recommendations\n\n| Priority | Action |\n|---|---|\n| **High** | Validate whether the growth driver is sustainable beyond Day 100 |\n| **High** | Use \u00b1$97 confidence bands in budget planning, not point estimates |\n| **Medium** | Enrich the model with seasonality or day-of-week features to improve R\u00b2 |\n| **Medium** | Set a performance alert if actual revenue falls below ~$1,900 on any day (suggesting trend reversal) |\n| **Low** | Consider a non-linear model if growth begins to accelerate or decelerate noticeably |\n\n---\n\n**Bottom Line:** The business is on a **healthy, moderate-confidence growth trajectory**. The forecast is credible for near-term planning but should be treated as a **directional guide, not a precise guarantee** \u2014 particularly given the ~$97 daily error margin."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "cold_boot_secs": 17.78,
+  "image_boot_secs": 4.34,
+  "boot_speedup": 4.1,
+  "num_analyst_agents": 4,
+  "num_total_agents": 5,
+  "parallel_execution_secs": 108.28,
+  "total_pipeline_secs": 130.18,
+  "all_sandboxes_unique": true,
+  "avg_agent_time_secs": 59.5,
+  "sequential_equivalent_secs": 238.0,
+  "parallelism_speedup": 2.2,
+  "crash_isolation": "CONFIRMED",
+  "crash_test_total_secs": 104.54
+}
