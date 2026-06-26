@@ -1,3 +1,4 @@
+=== ARTICLE METRICS ===
 {
   "cold_boot_secs": 19.49,
   "image_boot_secs": 4.51,
@@ -13,3 +14,5 @@
   "crash_isolation": "CONFIRMED",
   "crash_test_total_secs": 84.72
 }
+
+Saved to outputs/article_metrics.json

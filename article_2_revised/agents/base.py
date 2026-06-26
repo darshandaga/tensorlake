@@ -34,7 +34,8 @@ def boot_sandbox(max_retries: int = 12, retry_delay: float = 8.0) -> Sandbox:
         try:
             return Sandbox.create(image=AGENT_IMAGE, timeout_secs=300)
         except Exception as e:
-            if "quota" in str(e).lower() and attempt < max_retries - 1:
+            err = str(e).lower()
+            if ("quota" in err or "limit" in err or "capacity" in err) and attempt < max_retries - 1:
                 print(f"  [boot_sandbox] Quota hit — waiting {retry_delay}s then retrying "
                       f"(attempt {attempt + 1}/{max_retries})...")
                 time.sleep(retry_delay)
@@ -45,6 +46,7 @@ def boot_sandbox(max_retries: int = 12, retry_delay: float = 8.0) -> Sandbox:
 
 def write_data_to_sandbox(sb: Sandbox, csv_content: str):
     """Write the shared dataset into the sandbox workspace."""
+    sb.run("mkdir", ["-p", "/workspace/data"])
     sb.write_file("/workspace/data/dataset.csv", csv_content.encode())
 
 

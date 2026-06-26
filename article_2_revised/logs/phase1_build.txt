@@ -1,20 +1,397 @@
-Image: analyst-agent-image
-Template ID: sandbox_template_DgJkWFQ97gtB7DM9RRMKb
-Snapshot ID: snapshot_sandbox_template_build_Dz8dqfKJCcRGqCC8FDmBL
-Build time: 123.5s
-Base image: python:3.11-slim
-Packages installed: numpy pandas scikit-learn scipy statsmodels anthropic requests
-Snapshot size: 253279436 bytes (~241 MB)
-Rootfs disk: 10737418240 bytes (10 GB)
-Status: SUCCESS
+[status] Building image 'analyst-agent-image'...
+[status] Loading Dockerfile...
+[status] Selected image name: analyst-agent-image
+[status] Preparing rootfs build...
+[status] Build mode: RootfsBase
+[status] Builder resources: 1.00 CPU, 1.00 GiB, 64.0 GiB disk
+[status] Target rootfs size: 10.0 GiB
+[status] Creating rootfs builder sandbox from tensorlake/rootfs-builder...
+[status] Rootfs builder sandbox tfa2xw6prmjszj2nd68qt is running
+[status] Uploading build context...
+[status] Creating build context archive from /Users/darshandaga/Downloads/tensorlake/article_2_revised...
+[status] Creating build context archive: 0% (0 B / 171 KiB)
+[status] Creating build context archive: 1% (2.22 KiB / 171 KiB)
+[status] Creating build context archive: 3% (5.69 KiB / 171 KiB)
+[status] Creating build context archive: 4% (7.03 KiB / 171 KiB)
+[status] Creating build context archive: 5% (9.04 KiB / 171 KiB)
+[status] Creating build context archive: 6% (11.9 KiB / 171 KiB)
+[status] Creating build context archive: 7% (12.9 KiB / 171 KiB)
+[status] Creating build context archive: 8% (14.4 KiB / 171 KiB)
+[status] Creating build context archive: 9% (16.8 KiB / 171 KiB)
+[status] Creating build context archive: 11% (19.2 KiB / 171 KiB)
+[status] Creating build context archive: 13% (22.9 KiB / 171 KiB)
+[status] Creating build context archive: 15% (26.1 KiB / 171 KiB)
+[status] Creating build context archive: 17% (29.3 KiB / 171 KiB)
+[status] Creating build context archive: 19% (32.6 KiB / 171 KiB)
+[status] Creating build context archive: 20% (34.4 KiB / 171 KiB)
+[status] Creating build context archive: 22% (37.6 KiB / 171 KiB)
+[status] Creating build context archive: 23% (39.9 KiB / 171 KiB)
+[status] Creating build context archive: 24% (42.5 KiB / 171 KiB)
+[status] Creating build context archive: 26% (44.7 KiB / 171 KiB)
+[status] Creating build context archive: 30% (52.7 KiB / 171 KiB)
+[status] Creating build context archive: 35% (60.7 KiB / 171 KiB)
+[status] Creating build context archive: 38% (66.1 KiB / 171 KiB)
+[status] Creating build context archive: 39% (67.8 KiB / 171 KiB)
+[status] Creating build context archive: 41% (70.4 KiB / 171 KiB)
+[status] Creating build context archive: 42% (72.5 KiB / 171 KiB)
+[status] Creating build context archive: 44% (76.3 KiB / 171 KiB)
+[status] Creating build context archive: 46% (79.0 KiB / 171 KiB)
+[status] Creating build context archive: 49% (84.4 KiB / 171 KiB)
+[status] Creating build context archive: 50% (86.3 KiB / 171 KiB)
+[status] Creating build context archive: 51% (88.3 KiB / 171 KiB)
+[status] Creating build context archive: 56% (96.6 KiB / 171 KiB)
+[status] Creating build context archive: 61% (105 KiB / 171 KiB)
+[status] Creating build context archive: 65% (113 KiB / 171 KiB)
+[status] Creating build context archive: 66% (114 KiB / 171 KiB)
+[status] Creating build context archive: 71% (123 KiB / 171 KiB)
+[status] Creating build context archive: 74% (127 KiB / 171 KiB)
+[status] Creating build context archive: 78% (135 KiB / 171 KiB)
+[status] Creating build context archive: 79% (136 KiB / 171 KiB)
+[status] Creating build context archive: 84% (144 KiB / 171 KiB)
+[status] Creating build context archive: 89% (152 KiB / 171 KiB)
+[status] Creating build context archive: 90% (155 KiB / 171 KiB)
+[status] Creating build context archive: 92% (158 KiB / 171 KiB)
+[status] Creating build context archive: 94% (162 KiB / 171 KiB)
+[status] Creating build context archive: 98% (168 KiB / 171 KiB)
+[status] Creating build context archive: 100% (171 KiB / 171 KiB)
+[status] Build context: 46 files, 171 KiB uncompressed, 74.2 KiB compressed
+[status] Uploading build context archive: 0% (0 B / 74.2 KiB)
+[status] Uploading build context archive: 10% (8.00 KiB / 74.2 KiB)
+[status] Uploading build context archive: 21% (16.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 32% (24.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 43% (32.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 53% (40.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 64% (48.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 75% (56.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 86% (64.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 97% (72.0 KiB / 74.2 KiB)
+[status] Uploading build context archive: 100% (74.2 KiB / 74.2 KiB)
+[status] Uploading build context archive: 100% (74.2 KiB / 74.2 KiB)
+[status] Untarring build context archive in builder sandbox...
+[status] Build context extracted; removed remote archive
+[status] Running offline rootfs builder...
+[stdout] Using upload headers from build spec
+[stdout] Started dockerd with overlay2 storage driver
+[stdout] tl-rootfs-build: start prepare local parent images
+[stdout] tl-rootfs-build: finished prepare local parent images in 0.0s
+[stdout] tl-rootfs-build: start build child rootfs ext4
+[stdout] Disk usage (before docker build):
+[stdout] Filesystem      Size  Used Avail Use% Mounted on
+[stdout] /dev/root        63G  997M   59G   2% /
+[stdout] /dev/root        63G  997M   59G   2% /
+[stdout] TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+[stdout] Images          0         0         0B        0B
+[stdout] Containers      0         0         0B        0B
+[stdout] Local Volumes   0         0         0B        0B
+[stdout] Build Cache     0         0         0B        0B
+[stdout] tl-rootfs-build: start user docker build
+[stdout] + docker build --network host -f /var/lib/tensorlake/rootfs-builder/work/Dockerfile -t tensorlake-rootfs-child:user /var/lib/tensorlake/rootfs-builder/build/context
+[stderr] #0 building with "default" instance using docker driver
+[stderr] 
+[stderr] #1 [internal] load build definition from Dockerfile
+[stderr] #1 transferring dockerfile: 161B done
+[stderr] #1 DONE 0.0s
+[stderr] 
+[stderr] #2 [auth] library/python:pull token for registry-1.docker.io
+[stderr] #2 DONE 0.0s
+[stderr] 
+[stderr] #3 [internal] load metadata for docker.io/library/python:3.11-slim
+[stderr] #3 DONE 0.4s
+[stderr] 
+[stderr] #4 [internal] load .dockerignore
+[stderr] #4 transferring context: 2B done
+[stderr] #4 DONE 0.0s
+[stderr] 
+[stderr] #5 [1/3] FROM docker.io/library/python:3.11-slim@sha256:cdbd05fb6f457ca275ff51ce00d93d865ca0b6a25f5ffb08262d94f6835771e5
+[stderr] #5 resolve docker.io/library/python:3.11-slim@sha256:cdbd05fb6f457ca275ff51ce00d93d865ca0b6a25f5ffb08262d94f6835771e5 done
+[stderr] #5 sha256:cdbd05fb6f457ca275ff51ce00d93d865ca0b6a25f5ffb08262d94f6835771e5 10.37kB / 10.37kB done
+[stderr] #5 sha256:506f2951c04925a2a98fc0604e0e0a3ffd2788cc4aed0eb77c3517c98ac651c0 1.75kB / 1.75kB done
+[stderr] #5 sha256:b7486dbe03b34a981c9ef418082f056cd26418a77b83903a520cda36a6928333 5.48kB / 5.48kB done
+[stderr] #5 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 4.19MB / 29.79MB 0.1s
+[stderr] #5 sha256:d31bca4e70704f7ea90d346d4041a25dcd35888777af794f232f85376bff4154 1.29MB / 1.29MB 0.1s done
+[stderr] #5 sha256:2bd1111909f3359c1e4322cc6406924173d88d730ca8c078830e9af10d75a12f 5.24MB / 14.36MB 0.1s
+[stderr] #5 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 23.07MB / 29.79MB 0.3s
+[stderr] #5 sha256:2bd1111909f3359c1e4322cc6406924173d88d730ca8c078830e9af10d75a12f 14.36MB / 14.36MB 0.2s done
+[stderr] #5 sha256:ef10b7552742365868f59e04ba212fa52040be3793f575a364223779eccaf9ab 250B / 250B 0.1s done
+[stderr] #5 extracting sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a
+[stderr] #5 extracting sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 0.8s done
+[stderr] #5 extracting sha256:d31bca4e70704f7ea90d346d4041a25dcd35888777af794f232f85376bff4154 0.1s done
+[stderr] #5 extracting sha256:2bd1111909f3359c1e4322cc6406924173d88d730ca8c078830e9af10d75a12f
+[stderr] #5 extracting sha256:2bd1111909f3359c1e4322cc6406924173d88d730ca8c078830e9af10d75a12f 0.4s done
+[stderr] #5 extracting sha256:ef10b7552742365868f59e04ba212fa52040be3793f575a364223779eccaf9ab
+[stderr] #5 extracting sha256:ef10b7552742365868f59e04ba212fa52040be3793f575a364223779eccaf9ab 0.0s done
+[stderr] #5 DONE 1.9s
+[stderr] 
+[stderr] #6 [2/3] RUN useradd -m tl-user
+[stderr] #6 DONE 0.1s
+[stderr] 
+[stderr] #7 [3/3] RUN pip install numpy pandas scikit-learn scipy statsmodels anthropic requests
+[stderr] #7 1.373 Collecting numpy
+[stderr] #7 1.395   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+[stderr] #7 1.507 Collecting pandas
+[stderr] #7 1.511   Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+[stderr] #7 1.520      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 10.3 MB/s eta 0:00:00
+[stderr] #7 1.624 Collecting scikit-learn
+[stderr] #7 1.628   Downloading scikit_learn-1.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+[stderr] #7 1.749 Collecting scipy
+[stderr] #7 1.754   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+[stderr] #7 1.761      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 18.0 MB/s eta 0:00:00
+[stderr] #7 1.802 Collecting statsmodels
+[stderr] #7 1.807   Downloading statsmodels-0.14.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+[stderr] #7 1.852 Collecting anthropic
+[stderr] #7 1.856   Downloading anthropic-0.112.0-py3-none-any.whl.metadata (3.2 kB)
+[stderr] #7 1.885 Collecting requests
+[stderr] #7 1.889   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+[stderr] #7 1.967 Collecting python-dateutil>=2.8.2 (from pandas)
+[stderr] #7 1.972   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[stderr] #7 2.029 Collecting joblib>=1.4.0 (from scikit-learn)
+[stderr] #7 2.033   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+[stderr] #7 2.090 Collecting narwhals>=2.0.1 (from scikit-learn)
+[stderr] #7 2.095   Downloading narwhals-2.22.1-py3-none-any.whl.metadata (15 kB)
+[stderr] #7 2.111 Collecting threadpoolctl>=3.5.0 (from scikit-learn)
+[stderr] #7 2.115   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+[stderr] #7 2.182 Collecting patsy>=0.5.6 (from statsmodels)
+[stderr] #7 2.186   Downloading patsy-1.0.2-py2.py3-none-any.whl.metadata (3.6 kB)
+[stderr] #7 2.211 Collecting packaging>=21.3 (from statsmodels)
+[stderr] #7 2.216   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+[stderr] #7 2.252 Collecting anyio<5,>=3.5.0 (from anthropic)
+[stderr] #7 2.256   Downloading anyio-4.14.1-py3-none-any.whl.metadata (4.6 kB)
+[stderr] #7 2.276 Collecting distro<2,>=1.7.0 (from anthropic)
+[stderr] #7 2.280   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+[stderr] #7 2.297 Collecting docstring-parser<1,>=0.15 (from anthropic)
+[stderr] #7 2.301   Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+[stderr] #7 2.325 Collecting httpx<1,>=0.25.0 (from anthropic)
+[stderr] #7 2.329   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+[stderr] #7 2.408 Collecting jiter<1,>=0.4.0 (from anthropic)
+[stderr] #7 2.414   Downloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+[stderr] #7 2.558 Collecting pydantic<3,>=1.9.0 (from anthropic)
+[stderr] #7 2.562   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+[stderr] #7 2.567      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.4/109.4 kB 28.3 MB/s eta 0:00:00
+[stderr] #7 2.581 Collecting sniffio (from anthropic)
+[stderr] #7 2.584   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+[stderr] #7 2.608 Collecting typing-extensions<5,>=4.14 (from anthropic)
+[stderr] #7 2.613   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+[stderr] #7 2.708 Collecting charset_normalizer<4,>=2 (from requests)
+[stderr] #7 2.712   Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+[stderr] #7 2.717      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.9/40.9 kB 9.7 MB/s eta 0:00:00
+[stderr] #7 2.737 Collecting idna<4,>=2.5 (from requests)
+[stderr] #7 2.743   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+[stderr] #7 2.778 Collecting urllib3<3,>=1.26 (from requests)
+[stderr] #7 2.782   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+[stderr] #7 2.806 Collecting certifi>=2023.5.7 (from requests)
+[stderr] #7 2.810   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+[stderr] #7 2.856 Collecting httpcore==1.* (from httpx<1,>=0.25.0->anthropic)
+[stderr] #7 2.860   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+[stderr] #7 2.879 Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->anthropic)
+[stderr] #7 2.883   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+[stderr] #7 2.933 Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.9.0->anthropic)
+[stderr] #7 2.937   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+[stderr] #7 3.590 Collecting pydantic-core==2.46.4 (from pydantic<3,>=1.9.0->anthropic)
+[stderr] #7 3.594   Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+[stderr] #7 3.615 Collecting typing-inspection>=0.4.2 (from pydantic<3,>=1.9.0->anthropic)
+[stderr] #7 3.619   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+[stderr] #7 3.640 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+[stderr] #7 3.644   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[stderr] #7 3.683 Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+[stderr] #7 3.802    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 122.8 MB/s eta 0:00:00
+[stderr] #7 3.807 Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+[stderr] #7 3.887    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 159.2 MB/s eta 0:00:00
+[stderr] #7 3.892 Downloading scikit_learn-1.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+[stderr] #7 3.959    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 144.4 MB/s eta 0:00:00
+[stderr] #7 3.971 Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+[stderr] #7 4.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 68.3 MB/s eta 0:00:00
+[stderr] #7 4.270 Downloading statsmodels-0.14.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.4 MB)
+[stderr] #7 4.324    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 198.7 MB/s eta 0:00:00
+[stderr] #7 4.329 Downloading anthropic-0.112.0-py3-none-any.whl (931 kB)
+[stderr] #7 4.336    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 932.0/932.0 kB 175.1 MB/s eta 0:00:00
+[stderr] #7 4.340 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+[stderr] #7 4.344    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 22.5 MB/s eta 0:00:00
+[stderr] #7 4.349 Downloading anyio-4.14.1-py3-none-any.whl (124 kB)
+[stderr] #7 4.352    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.9/124.9 kB 60.0 MB/s eta 0:00:00
+[stderr] #7 4.357 Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+[stderr] #7 4.362    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 39.8 MB/s eta 0:00:00
+[stderr] #7 4.368 Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+[stderr] #7 4.373    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 kB 55.3 MB/s eta 0:00:00
+[stderr] #7 4.377 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+[stderr] #7 4.383 Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+[stderr] #7 4.390 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+[stderr] #7 4.394    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 19.3 MB/s eta 0:00:00
+[stderr] #7 4.399 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+[stderr] #7 4.403    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 25.1 MB/s eta 0:00:00
+[stderr] #7 4.407 Downloading idna-3.18-py3-none-any.whl (65 kB)
+[stderr] #7 4.412    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 18.9 MB/s eta 0:00:00
+[stderr] #7 4.416 Downloading jiter-0.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (349 kB)
+[stderr] #7 4.421    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.4/349.4 kB 88.5 MB/s eta 0:00:00
+[stderr] #7 4.426 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+[stderr] #7 4.431    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 80.4 MB/s eta 0:00:00
+[stderr] #7 4.435 Downloading narwhals-2.22.1-py3-none-any.whl (454 kB)
+[stderr] #7 4.441    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 454.8/454.8 kB 115.8 MB/s eta 0:00:00
+[stderr] #7 4.445 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+[stderr] #7 4.450    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 26.5 MB/s eta 0:00:00
+[stderr] #7 4.454 Downloading patsy-1.0.2-py2.py3-none-any.whl (233 kB)
+[stderr] #7 4.459    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.3/233.3 kB 62.3 MB/s eta 0:00:00
+[stderr] #7 4.463 Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+[stderr] #7 4.470    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.3/472.3 kB 100.0 MB/s eta 0:00:00
+[stderr] #7 4.475 Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+[stderr] #7 4.488    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 177.9 MB/s eta 0:00:00
+[stderr] #7 4.492 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[stderr] #7 4.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 59.2 MB/s eta 0:00:00
+[stderr] #7 4.502 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+[stderr] #7 4.508 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+[stderr] #7 4.512    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 12.3 MB/s eta 0:00:00
+[stderr] #7 4.516 Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+[stderr] #7 4.521    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 33.2 MB/s eta 0:00:00
+[stderr] #7 4.526 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+[stderr] #7 4.532 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+[stderr] #7 4.539 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+[stderr] #7 4.547 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+[stderr] #7 4.553 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+[stderr] #7 4.869 Installing collected packages: urllib3, typing-extensions, threadpoolctl, sniffio, six, packaging, numpy, narwhals, joblib, jiter, idna, h11, docstring-parser, distro, charset_normalizer, certifi, annotated-types, typing-inspection, scipy, requests, python-dateutil, pydantic-core, patsy, httpcore, anyio, scikit-learn, pydantic, pandas, httpx, statsmodels, anthropic
+[stderr] #7 17.10 Successfully installed annotated-types-0.7.0 anthropic-0.112.0 anyio-4.14.1 certifi-2026.6.17 charset_normalizer-3.4.7 distro-1.9.0 docstring-parser-0.18.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 jiter-0.15.0 joblib-1.5.3 narwhals-2.22.1 numpy-2.4.6 packaging-26.2 pandas-3.0.3 patsy-1.0.2 pydantic-2.13.4 pydantic-core-2.46.4 python-dateutil-2.9.0.post0 requests-2.34.2 scikit-learn-1.9.0 scipy-1.17.1 six-1.17.0 sniffio-1.3.1 statsmodels-0.14.6 threadpoolctl-3.6.0 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.7.0
+[stderr] #7 17.11 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[stderr] #7 17.17 
+[stderr] #7 17.17 [notice] A new release of pip is available: 24.0 -> 26.1.2
+[stderr] #7 17.17 [notice] To update, run: pip install --upgrade pip
+[stderr] #7 DONE 17.5s
+[stderr] 
+[stderr] #8 exporting to image
+[stderr] #8 exporting layers
+[stderr] #8 exporting layers 3.9s done
+[stderr] #8 writing image sha256:9edb836dd3ddda601dc97bcccb8ea7cc04541cf187af489527c09c98eac68b42 0.0s done
+[stderr] #8 naming to docker.io/library/tensorlake-rootfs-child:user done
+[stderr] #8 DONE 3.9s
+[stdout] tl-rootfs-build: finished user docker build in 24.0s
+[stdout] tl-rootfs-build: start read user image OCI config
+[stdout] + docker image inspect --format '{{.Os}}/{{.Architecture}}' tensorlake-rootfs-child:user
+[stdout] + docker image inspect --format '{{.Id}}' tensorlake-rootfs-child:user
+[stdout] + docker info --format '{{.DockerRootDir}}'
+[stdout] + docker info --format '{{.Driver}}'
+[stdout] tl-rootfs-build: finished read user image OCI config in 0.2s
+[stdout] tl-rootfs-build: start prune Docker build cache after user build
+[stdout] ID						RECLAIMABLE	SIZE		LAST ACCESSED
+[stdout] 8xkol6pqe9fkl5y53e6emgpyh               	true 		523.6MB   	Less than a second ago
+[stdout] fahrq2nrhufnx12bztfkhmiz5*              	true 	0B        	Less than a second ago
+[stdout] io7a1ijpi8774yr4x6bgxxejy*              	true 	124B      	Less than a second ago
+[stdout] wfyy4s9sik2k8drkjxlzyqyds               	true 	8.483kB   	Less than a second ago
+[stdout] 1zj5fq5zps7zmd1lf3vo28mx1               	true 	0B        	Less than a second ago
+[stdout] xdietly703ogyla2dukzmxkft               	true 	0B        	21 seconds ago
+[stdout] vfp072i947s1lzmtthnivx9mi               	true 	0B        	21 seconds ago
+[stdout] qpns51fcsxn2l1hdms1brhlfy               	true 	0B        	21 seconds ago
+[stdout] Total:	523.6MB
+[stdout] Disk usage (after user build cache prune):
+[stdout] Filesystem      Size  Used Avail Use% Mounted on
+[stdout] /dev/root        63G  1.7G   59G   3% /
+[stdout] /dev/root        63G  1.7G   59G   3% /
+[stdout] TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+[stdout] Images          1         0         648MB     0B (0%)
+[stdout] Containers      0         0         0B        0B
+[stdout] Local Volumes   0         0         0B        0B
+[stdout] Build Cache     0         0         0B        0B
+[stdout] tl-rootfs-build: finished prune Docker build cache after user build in 0.1s
+[stdout] tl-rootfs-build: start report disk budget
+[stdout] + docker image inspect --format '{{.Size}}' tensorlake-rootfs-child:user
+[stdout] Disk budget: image layers sum to 0.6 GiB, rootfs size 10.0 GiB, builder disk 58.0 GiB free of 62.9 GiB
+[stdout] tl-rootfs-build: finished report disk budget in 0.0s
+[stdout] tl-rootfs-build: start resolve overlay2 layer directories
+[stdout] tl-rootfs-build: finished resolve overlay2 layer directories in 0.0s
+[stdout] tl-rootfs-build: start stop dockerd
+[stdout] Stopping dockerd
+[stdout] tl-rootfs-build: finished stop dockerd in 1.0s
+[stdout] tl-rootfs-build: start materialize overlay2 image rootfs
+[stdout] + indexify-rootfs-materialize overlay-to-ext4 --overlay-diff-dir /var/lib/tensorlake/rootfs-builder/work/docker-data/overlay2/l/XCYSUEGY4OYQ75O7BWCKJK7TRY --overlay-diff-dir /var/lib/tensorlake/rootfs-builder/work/docker-data/overlay2/l/T3273NIQI562YUZ52U46MBPPVU --overlay-diff-dir /var/lib/tensorlake/rootfs-builder/work/docker-data/overlay2/l/RWBLCHLUW55MIXHUPQHCM7FUFQ --overlay-diff-dir /var/lib/tensorlake/rootfs-builder/work/docker-data/overlay2/l/OWBKKTN3Y6DYT4YADMWO37DHT4 --overlay-diff-dir /var/lib/tensorlake/rootfs-builder/work/docker-data/overlay2/l/WI3UCBEQ4IODUPR2AKRK7H4BOM --overlay-diff-dir /var/lib/tensorlake/rootfs-builder/work/docker-data/overlay2/l/T6ZZB44WG6IPW7F4HNIN4PGWGN --output-rootfs-path /var/lib/tensorlake/rootfs-builder/work/child.ext4 --size-bytes 10737418240 --external-runtime-init-path /usr/local/share/tensorlake/external-runtime-init --oci-config-path /var/lib/tensorlake/rootfs-builder/work/user-oci-config.json
+[stdout] {
+[stdout]   "rootfs_path": "/var/lib/tensorlake/rootfs-builder/work/child.ext4",
+[stdout]   "rootfs_disk_bytes": 10737418240,
+[stdout]   "overlay_layers_applied": 6,
+[stdout]   "hardlinks_broken": 0,
+[stdout]   "overlay_stats": {
+[stdout]     "entries_written": 23480,
+[stdout]     "whiteouts_applied": 0,
+[stdout]     "hardlinks_broken": 0,
+[stdout]     "redirects_applied": 0,
+[stdout]     "redirect_copied_entries": 0,
+[stdout]     "redirect_copied_bytes": 0
+[stdout]   },
+[stdout]   "oci_config_applied": true
+[stdout] }
+[stdout] tl-rootfs-build: finished materialize overlay2 image rootfs in 19.1s
+[stdout] Disk usage (after rootfs materialization before docker cleanup):
+[stdout] Filesystem      Size  Used Avail Use% Mounted on
+[stdout] /dev/root        63G  2.6G   58G   5% /
+[stdout] /dev/root        63G  2.6G   58G   5% /
+[stdout] tl-rootfs-build: start cleanup Docker storage
+[stderr] e2fsck 1.47.0 (5-Feb-2023)
+[stdout] tl-rootfs-build: finished cleanup Docker storage in 0.2s
+[stdout] Disk usage (after docker cleanup):
+[stdout] Filesystem      Size  Used Avail Use% Mounted on
+[stdout] /dev/root        63G  2.0G   58G   4% /
+[stdout] /dev/root        63G  2.0G   58G   4% /
+[stdout] tl-rootfs-build: finished build child rootfs ext4 in 44.6s
+[stdout] + e2fsck -f -n /var/lib/tensorlake/rootfs-builder/work/child.ext4
+[stdout] Pass 1: Checking inodes, blocks, and sizes
+[stdout] Pass 2: Checking directory structure
+[stdout] Pass 3: Checking directory connectivity
+[stdout] Pass 4: Checking reference counts
+[stdout] Pass 5: Checking group summary information
+[stdout] /var/lib/tensorlake/rootfs-builder/work/child.ext4: 23258/655360 files (0.1% non-contiguous), 248798/2621440 blocks
+[stdout] /var/lib/tensorlake/rootfs-builder/work/child.ext4: ext4 filesystem is clean
+[stdout] tl-rootfs-build: start write durable snapshot archive
+[stdout] Loaded guest runtime metadata from /usr/local/bin/indexify-guest-runtime-metadata
+[stdout] + indexify-rootfs-snapshot build-rootfs-base --rootfs-path /var/lib/tensorlake/rootfs-builder/work/child.ext4 --archive-path /var/lib/tensorlake/rootfs-builder/work/rootfs.tlsnap --snapshot-id snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz --snapshot-uri s3://prod-127537880326-sandbox-snapshots-us-east-1/rootfs/projects/project_RJGfTHQN9h8JBdpLtjWnK/sandbox-template-builds/sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz/snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz.tlsnap --metadata-out /var/lib/tensorlake/rootfs-builder/build/metadata.json --guest-runtime-layout external-drive --guest-runtime-drive-format squashfs --guest-boot-contract supervisor-init --daemon-artifact-id 95436e5590afd249df45b32b13081ba003837c5269f8ca9f12968c6139437a9e --supervisor-artifact-id 0922c93086aab9e1c39cdd130d73a96e374d997da5f508bfd6f3c5d158d6ecba --guest-runtime-artifact-id 405c885d66fe946c96aa44c3a84624c98fba5d9fa68d425a9c367ac5bb97ea54 --supervisor-init-wrapper-artifact-id 037a40eb74270c769a286746c62f9ebc7eabdf9ab3687e8bdbc71ff8ec56211e
+[stdout] {
+[stdout]   "snapshot_id": "snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz",
+[stdout]   "snapshot_uri": "s3://prod-127537880326-sandbox-snapshots-us-east-1/rootfs/projects/project_RJGfTHQN9h8JBdpLtjWnK/sandbox-template-builds/sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz/snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz.tlsnap",
+[stdout]   "snapshot_format_version": "durable_archive_v1",
+[stdout]   "rootfs_node_kind": "base",
+[stdout]   "snapshot_size_bytes": 253279987,
+[stdout]   "rootfs_disk_bytes": 10737418240,
+[stdout]   "source_manifest_digest": "db050cb5f3247873f4c75ed5818d715009089a5ee5812386f7cb37eae6f0e702",
+[stdout]   "archive_toc_digest": "a740b854d02b1bf81a5c77e2469d6ba4f4fda64c39f0b61393c816df81e5cd1e"
+[stdout] }
+[stdout] tl-rootfs-build: finished write durable snapshot archive in 3.8s
+[stdout] tl-rootfs-build: start upload durable snapshot archive
+[stderr] tl-rootfs-build: part 1 upload (host s3.us-east-1.amazonaws.com): attempt 1/5 failed (HTTPError: HTTP Error 400: Bad Request); giving up
+[stdout] tl-rootfs-build: failed upload durable snapshot archive after 0.4s
+[stderr] tl-rootfs-build: part 1 upload failed with HTTP 400: <?xml version="1.0" encoding="UTF-8"?>
+[stderr] <Error><Code>ExpiredToken</Code><Message>The provided token has expired.</Message><Token-0>IQoJb3JpZ2luX2VjEJb//////////wEaCXVzLWVhc3QtMSJGMEQCIGHJoUvK+/hJGv7sfU+Wqy28Qmcjw3rJIG0Bxm/LaM2hAiBYI6fFDwuEnNjPunGXJ4LbTC87pi6rC6Y+/P99eVnTVCq5BQhfEAAaDDEyNzUzNzg4MDMyNiIM85IcPIuDlM6A61E1KpYFIXE/DoX/qGYW11Tqrf3Ij6hpIMTMYT4nKDVLAL2vOouyIW2hkt3MnvLOWr4dLeCqwhLTlOEXwtx0IkFjSh4LY0DLagFaxJ7d39ExT5Or1LA1TD0bQdVOw/fOCmC1WddEZPTA4JElg+Y/WLd6XHhQb9YI6vGoTs0N+72mVdcxqbsJPDrTXLezAIsEIAE+MA
+Building and registering 'analyst-agent-image'...
+(First build is slow — Tensorlake runs pip install inside builder sandbox)
+Traceback (most recent call last):
+  File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/sandbox_builder.py", line 582, in build_sandbox_image
+    return _run_rust_image_create(
+        rust_dockerfile_path,
+    ...<9 lines>...
+        emit=emit,
+    )
+  File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/sandbox_builder.py", line 229, in _run_rust_image_create
+    result_json = _rust_build_sandbox_image(
+        ctx.api_url,
+    ...<16 lines>...
+        _forwarder(emit),
+    )
+  File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/sandbox_builder.py", line 115, in _rust_build_sandbox_image
+    return rust_build_sandbox_image(*args, **kwargs)
+_cloud_sdk.CloudSandboxClientError: ('sandbox_image_build', None, "Command '/usr/local/bin/tl-rootfs-build' failed with exit code 1 (builder sandbox: tfa2xw6prmjszj2nd68qt, build: sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz)")
 
---- VERIFY ---
-Sandbox ID: 47pvn29y4wdwpiclefrra
-Boot time: 4.45s
-numpy 2.4.6 | pandas 3.0.3 | scipy 1.17.1 | anthropic 0.112.0
-Status: VERIFIED
+The above exception was the direct cause of the following exception:
 
---- BOOT BENCHMARK ---
-Cold boot + pip install: 17.78s
-Registered image boot:    4.34s
-Speedup:                  4.1x
+Traceback (most recent call last):
+  File "/Users/darshandaga/Downloads/tensorlake/article_2_revised/image_builder/build_agent_image.py", line 21, in <module>
+    image.build(
+    ~~~~~~~~~~~^
+        registered_name=REGISTERED_NAME,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        verbose=True,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/image.py", line 135, in build
+    return build_sandbox_image(
+        self,
+    ...<8 lines>...
+        verbose=verbose,
+    )
+  File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/sandbox_builder.py", line 598, in build_sandbox_image
+    raise SandboxImageBuildError(f"{type(e).__name__}: {e}") from e
+tensorlake.image.sandbox_builder.SandboxImageBuildError: CloudSandboxClientError: ('sandbox_image_build', None, "Command '/usr/local/bin/tl-rootfs-build' failed with exit code 1 (builder sandbox: tfa2xw6prmjszj2nd68qt, build: sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz)")

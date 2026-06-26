@@ -1,2 +1,55 @@
-  [Forecaster] Sandbox nxjk6l3zqvdthmes9c8ql booted
-{"agent": "forecaster", "sandbox_id": "nxjk6l3zqvdthmes9c8ql", "elapsed_secs": 26.56, "forecast_data": {"model": "linear_regression", "slope_per_day": 11.117, "r_squared": 0.7599, "holdout_mae": 96.92, "forecast": [{"day": 91, "predicted_revenue": 1990.32}, {"day": 92, "predicted_revenue": 2001.44}, {"day": 93, "predicted_revenue": 2012.56}, {"day": 94, "predicted_revenue": 2023.67}, {"day": 95, "predicted_revenue": 2034.79}, {"day": 96, "predicted_revenue": 2045.91}, {"day": 97, "predicted_revenue": 2057.02}, {"day": 98, "predicted_revenue": 2068.14}, {"day": 99, "predicted_revenue": 2079.26}, {"day": 100, "predicted_revenue": 2090.37}]}, "interpretation": "# Revenue Forecast Analysis: Days 91\u2013100\n\n---\n\n## \ud83d\udcc8 Expected Growth\n\n| Metric | Value |\n|---|---|\n| Starting Revenue (Day 91) | $1,990.32 |\n| Ending Revenue (Day 100) | $2,090.37 |\n| Total 10-Day Gain | **+$100.05** |\n| Daily Growth Rate | **+$11.12/day** |\n| Cumulative % Increase | **+5.03%** |\n\nThe model projects **steady, linear growth** of approximately **$11.12 per day**, crossing the **$2,000 threshold on Day 92** and approaching **$2,100 by Day 100**. There are no predicted dips or volatility \u2014 growth is consistent and uninterrupted across the window.\n\n---\n\n## \ud83c\udfaf Confidence Level: **Moderate**\n\n```\nR\u00b2 = 0.7599   \u2192  The model explains ~76% of revenue variance\nMAE = $96.92  \u2192  Typical daily prediction error of \u00b1$96.92\n```\n\n### What This Means in Practice\n\n```\nDay 91 Realistic Range:  $1,893 \u2013 $2,087  (\u00b1$97)\nDay 100 Realistic Range: $1,993 \u2013 $2,187  (\u00b1$97)\n```\n\n> \u26a0\ufe0f **Key caveat:** The MAE (~$97) is nearly **9x the daily slope** ($11/day).\n> This means day-to-day noise significantly **masks the true trend signal**.\n> The growth direction is credible; the precise daily figures are not.\n\n### Confidence Assessment Breakdown\n\n| Factor | Signal | Implication |\n|---|---|---|\n| R\u00b2 = 0.76 | \ud83d\udfe1 Moderate fit | Reasonable but not high-confidence |\n| MAE = $96.92 | \ud83d\udd34 High relative error | Daily actuals will vary widely |\n| Linear model | \ud83d\udfe1 Simple structure | May miss seasonality or acceleration |\n| Consistent slope | \ud83d\udfe2 Stable trend | Upward direction is believable |\n\n---\n\n## \ud83d\udcbc Business Implications\n\n### \u2705 Opportunities\n- **Sustained upward trend** supports continued investment in growth initiatives\n- Crossing **$2,000/day (~$60K/month run rate)** is a meaningful milestone worth tracking\n- The linear pattern suggests **no imminent demand cliff** in the short term\n\n### \u26a0\ufe0f Risks & Watchpoints\n- **Actual revenue could realistically land anywhere between ~$1,900\u2013$2,190** on any given day \u2014 treat point estimates as directional, not precise\n- A **76% R\u00b2** means roughly **1 in 4 days** may behave in ways the model cannot explain (promotions, weekday effects, external shocks)\n- This model **cannot detect acceleration or deceleration** \u2014 if growth is compounding or slowing, a linear model will lag reality\n\n---\n\n## \ud83d\udd27 Recommendations\n\n```\nSHORT TERM  \u2502 Use the $2,000\u2013$2,090 band as a planning benchmark,\n            \u2502 not a guarantee. Flag any day below $1,900 as an anomaly.\n\nMEDIUM TERM \u2502 Investigate the ~24% unexplained variance. Add features\n            \u2502 like day-of-week, promotions, or seasonality dummies.\n\nMODEL NEXT  \u2502 Consider testing polynomial or time-series models (e.g.,\n            \u2502 ARIMA, Prophet) if 10-day forecasts need tighter MAE.\n```\n\n---\n\n**Bottom Line:** The forecast signals a **healthy, believable growth trend**, but operational decisions should account for **\u00b1$97 daily uncertainty**. Use this as a *directional compass*, not a precise budget guarantee."}
+  [Forecaster] Sandbox wk1y7jf27r234vzjwb9vr booted
+{
+  "agent": "forecaster",
+  "sandbox_id": "wk1y7jf27r234vzjwb9vr",
+  "elapsed_secs": 22.43,
+  "forecast_data": {
+    "model": "linear_regression",
+    "slope_per_day": 11.117,
+    "r_squared": 0.7599,
+    "holdout_mae": 96.92,
+    "forecast": [
+      {
+        "day": 91,
+        "predicted_revenue": 1990.32
+      },
+      {
+        "day": 92,
+        "predicted_revenue": 2001.44
+      },
+      {
+        "day": 93,
+        "predicted_revenue": 2012.56
+      },
+      {
+        "day": 94,
+        "predicted_revenue": 2023.67
+      },
+      {
+        "day": 95,
+        "predicted_revenue": 2034.79
+      },
+      {
+        "day": 96,
+        "predicted_revenue": 2045.91
+      },
+      {
+        "day": 97,
+        "predicted_revenue": 2057.02
+      },
+      {
+        "day": 98,
+        "predicted_revenue": 2068.14
+      },
+      {
+        "day": 99,
+        "predicted_revenue": 2079.26
+      },
+      {
+        "day": 100,
+        "predicted_revenue": 2090.37
+      }
+    ]
+  },
+  "interpretation": "# Revenue Forecast Analysis: Days 91\u2013100\n\n---\n\n## \ud83d\udcc8 Expected Growth\n\n| Metric | Value |\n|---|---|\n| Starting Revenue (Day 91) | $1,990.32 |\n| Ending Revenue (Day 100) | $2,090.37 |\n| **Total 10-Day Growth** | **+$100.05 (+5.0%)** |\n| Daily Growth Rate (Slope) | +$11.12 / day |\n| Growth Pattern | Steady, linear progression |\n\nThe model projects **consistent, incremental daily gains** of approximately **$11.12**, crossing the psychologically notable **$2,000 threshold on Day 92** and approaching **$2,100 by Day 100**.\n\n---\n\n## \ud83c\udfaf Confidence Level: **Moderate**\n\n### Supporting Indicators\n- \u2705 **R\u00b2 = 0.76** \u2014 The linear model explains ~76% of revenue variance, indicating a reasonably strong trend signal\n- \u2705 **Consistent slope** \u2014 No volatility or trend breaks in the forecast window\n\n### Risk Indicators\n- \u26a0\ufe0f **Holdout MAE = $96.92** \u2014 Actual daily revenue may deviate by roughly **\u00b1$97** from predictions\n- \u26a0\ufe0f **24% unexplained variance** \u2014 Meaningful noise or seasonality exists that the model does not capture\n- \u26a0\ufe0f **Linear assumption** \u2014 The model cannot account for acceleration, plateaus, or external shocks\n\n### Practical Confidence Range (Day 100 Example)\n```\nPredicted:  $2,090.37\nRealistic Range:  ~$1,993 \u2013 $2,187  (\u00b1 1 MAE)\n```\n\n---\n\n## \ud83d\udcbc Business Implications\n\n### 1. \ud83d\udfe2 Positive Trend \u2014 But Don't Over-Commit\nThe upward slope confirms healthy revenue momentum. However, with ~$97 daily error, **avoid making high-stakes decisions** (e.g., large inventory orders, aggressive hiring) based on point estimates alone.\n\n### 2. \ud83d\udcca Investigate the Unexplained 24%\nThe R\u00b2 gap suggests **unmodeled factors** may be influencing revenue \u2014 consider auditing for:\n- Weekly seasonality (weekday vs. weekend patterns)\n- Promotional events or campaigns\n- Channel-specific performance shifts\n\n### 3. \ud83c\udfaf Use the $2,000 Milestone as a KPI Checkpoint\nDay 92 is forecast to cross $2,000. **Track actual performance at this inflection point** \u2014 if actuals lag, it may signal trend weakening not yet visible in the model.\n\n### 4. \ud83d\udd04 Consider Model Upgrades\nFor higher-stakes planning, evaluate:\n- **ARIMA or Prophet** to capture seasonality\n- **Feature-enriched regression** (marketing spend, traffic, etc.)\n- **Prediction intervals** rather than point forecasts for risk budgeting\n\n---\n\n## \u2705 Summary Verdict\n\n> **The business is on a credible upward trajectory (+5% over 10 days), but forecast error of ~\u00b1$97/day warrants treating these figures as directional guidance rather than precise targets. Moderate confidence supports operational planning; caution is advised for capital allocation decisions.**"
+}
