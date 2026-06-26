@@ -337,10 +337,10 @@
 [stdout] /var/lib/tensorlake/rootfs-builder/work/child.ext4: ext4 filesystem is clean
 [stdout] tl-rootfs-build: start write durable snapshot archive
 [stdout] Loaded guest runtime metadata from /usr/local/bin/indexify-guest-runtime-metadata
-[stdout] + indexify-rootfs-snapshot build-rootfs-base --rootfs-path /var/lib/tensorlake/rootfs-builder/work/child.ext4 --archive-path /var/lib/tensorlake/rootfs-builder/work/rootfs.tlsnap --snapshot-id snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz --snapshot-uri s3://prod-127537880326-sandbox-snapshots-us-east-1/rootfs/projects/project_RJGfTHQN9h8JBdpLtjWnK/sandbox-template-builds/sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz/snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz.tlsnap --metadata-out /var/lib/tensorlake/rootfs-builder/build/metadata.json --guest-runtime-layout external-drive --guest-runtime-drive-format squashfs --guest-boot-contract supervisor-init --daemon-artifact-id 95436e5590afd249df45b32b13081ba003837c5269f8ca9f12968c6139437a9e --supervisor-artifact-id 0922c93086aab9e1c39cdd130d73a96e374d997da5f508bfd6f3c5d158d6ecba --guest-runtime-artifact-id 405c885d66fe946c96aa44c3a84624c98fba5d9fa68d425a9c367ac5bb97ea54 --supervisor-init-wrapper-artifact-id 037a40eb74270c769a286746c62f9ebc7eabdf9ab3687e8bdbc71ff8ec56211e
+[stdout] + indexify-rootfs-snapshot build-rootfs-base --rootfs-path /var/lib/tensorlake/rootfs-builder/work/child.ext4 --archive-path /var/lib/tensorlake/rootfs-builder/work/rootfs.tlsnap --snapshot-id snapshot_[build-id-redacted] --snapshot-uri s3://prod-127537880326-sandbox-snapshots-us-east-1/rootfs/projects/project_RJGfTHQN9h8JBdpLtjWnK/sandbox-template-builds/[build-id-redacted]/snapshot_[build-id-redacted].tlsnap --metadata-out /var/lib/tensorlake/rootfs-builder/build/metadata.json --guest-runtime-layout external-drive --guest-runtime-drive-format squashfs --guest-boot-contract supervisor-init --daemon-artifact-id 95436e5590afd249df45b32b13081ba003837c5269f8ca9f12968c6139437a9e --supervisor-artifact-id 0922c93086aab9e1c39cdd130d73a96e374d997da5f508bfd6f3c5d158d6ecba --guest-runtime-artifact-id 405c885d66fe946c96aa44c3a84624c98fba5d9fa68d425a9c367ac5bb97ea54 --supervisor-init-wrapper-artifact-id 037a40eb74270c769a286746c62f9ebc7eabdf9ab3687e8bdbc71ff8ec56211e
 [stdout] {
-[stdout]   "snapshot_id": "snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz",
-[stdout]   "snapshot_uri": "s3://prod-127537880326-sandbox-snapshots-us-east-1/rootfs/projects/project_RJGfTHQN9h8JBdpLtjWnK/sandbox-template-builds/sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz/snapshot_sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz.tlsnap",
+[stdout]   "snapshot_id": "snapshot_[build-id-redacted]",
+[stdout]   "snapshot_uri": "s3://prod-127537880326-sandbox-snapshots-us-east-1/rootfs/projects/project_RJGfTHQN9h8JBdpLtjWnK/sandbox-template-builds/[build-id-redacted]/snapshot_[build-id-redacted].tlsnap",
 [stdout]   "snapshot_format_version": "durable_archive_v1",
 [stdout]   "rootfs_node_kind": "base",
 [stdout]   "snapshot_size_bytes": 253279987,
@@ -371,7 +371,7 @@ Traceback (most recent call last):
     )
   File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/sandbox_builder.py", line 115, in _rust_build_sandbox_image
     return rust_build_sandbox_image(*args, **kwargs)
-_cloud_sdk.CloudSandboxClientError: ('sandbox_image_build', None, "Command '/usr/local/bin/tl-rootfs-build' failed with exit code 1 (builder sandbox: tfa2xw6prmjszj2nd68qt, build: sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz)")
+_cloud_sdk.CloudSandboxClientError: ('sandbox_image_build', None, "Command '/usr/local/bin/tl-rootfs-build' failed with exit code 1 (builder sandbox: tfa2xw6prmjszj2nd68qt, build: [build-id-redacted])")
 
 The above exception was the direct cause of the following exception:
 
@@ -394,4 +394,4 @@ Traceback (most recent call last):
     )
   File "/Users/darshandaga/Downloads/tensorlake/venv/lib/python3.13/site-packages/tensorlake/image/sandbox_builder.py", line 598, in build_sandbox_image
     raise SandboxImageBuildError(f"{type(e).__name__}: {e}") from e
-tensorlake.image.sandbox_builder.SandboxImageBuildError: CloudSandboxClientError: ('sandbox_image_build', None, "Command '/usr/local/bin/tl-rootfs-build' failed with exit code 1 (builder sandbox: tfa2xw6prmjszj2nd68qt, build: sandbox_template_build_BWd9RDbkrcm7BnNQPmLKz)")
+tensorlake.image.sandbox_builder.SandboxImageBuildError: CloudSandboxClientError: ('sandbox_image_build', None, "Command '/usr/local/bin/tl-rootfs-build' failed with exit code 1 (builder sandbox: tfa2xw6prmjszj2nd68qt, build: [build-id-redacted])")
